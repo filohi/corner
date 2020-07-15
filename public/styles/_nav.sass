@@ -1,0 +1,93 @@
+=res($point)
+    $sm: 'min-width: 576px'
+    $md: 'min-width: 768px'
+    $lg: 'min-width: 992px'
+    $xl: 'min-width: 1200px'
+    @if $point == 'sm' 
+        @media only screen and ($sm) 
+            @content
+    @else if $point == 'md'
+        @media only screen and ($md)
+            @content
+    @else if $point == 'lg'
+        @media only screen and ($lg) 
+            @content
+    @else if $point == 'xl'
+        @media only screen and ($xl) 
+            @content
+
+@mixin icon_before
+    content: ""
+    height: 17px
+    width: 17px
+    display: inline-block
+    margin-right: 5px
+
+nav
+    .hamburger 
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-right: 10px
+        cursor: pointer
+        z-index: 3
+        height: 72px
+        position: fixed
+        right: 0
+        top: 0
+        span
+            display: block
+            height: 5px
+            width: 39px
+            background: white
+            margin-bottom: 6px
+            border-radius: 2px
+            transition: 0.5s ease-out
+    .mobile_nav
+        height: 100vh
+        width: 100vw
+        position: fixed
+        top: 0
+        right: 0
+        transition: all .5s ease
+        margin-right: -130vw
+        background: rgba(0,0,0,.9)
+        ul
+            text-align: right
+            padding-top: 45px
+            font-size: 1.5rem
+            line-height: 1.5rem
+            list-style-type: none
+            li
+                padding: 5px 10px
+                &:nth-child(6)
+                    margin-top: 25px
+                    font-size: 1.3rem
+                &:nth-child(6)::before 
+                    @include icon_before
+                    background: url('../images/clock.png')
+                    background-size: cover
+                &:nth-child(7)
+                    font-size: 1.3rem
+                &:nth-child(7)::before
+                    @include icon_before
+                    background: url('../images/phone.png')
+                    background-size: cover
+                a
+                    text-decoration: none
+                    color: white
+
+.spanA 
+    transform: rotate(45deg)
+    transform-origin: left
+    color: white!important
+.spanB 
+    :opacity 0
+.spanC 
+    transform: rotate(-45deg)
+    transform-origin: 6px 5px
+.hidden
+    overflow: hidden  
+.margin_right 
+    margin-right: 0!important
+    

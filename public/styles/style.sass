@@ -1,0 +1,211 @@
+@import 'nav'
+@import 'classes'
+
+html
+    scroll-behavior: smooth
+body
+    font-family: 'Oswald', sans-serif
+    color: white
+    font-size: 1rem
+    font-weight: 200
+    margin: 0
+    h1, h2, h3, h4, h5, h6, p
+        margin: 0
+    form,input,textarea,button
+        font-family: 'Oswald', sans-serif
+        font-size: 1 rem
+    h2
+        font-weight: 200
+        text-align: center
+        color: black
+        font-size: 2rem
+    .body
+        .hero
+            background: url('../images/heroslider.png')
+            background-size: cover
+            background-position: top
+            .hero_header
+                padding: 70px 20px
+                h1
+                    margin: 0
+                    font-size: 2.5rem
+                    line-height: 3rem
+                    padding-bottom: 15px
+                    font-weight: 200
+                a
+                    text-decoration: none
+                    color: white
+                    border: 1px solid white
+                    padding: 3px 15px
+                    text-transform: uppercase
+            img
+                width: 100px
+                padding: 0 0 10px 20px
+
+        .gallery_wrap
+            background: $verylightgrey
+            padding: 20px 0
+            .gallery
+                transition: all 1s
+                .current
+                    display: flex
+                    justify-content: center
+                    flex-wrap: wrap
+                    align-items: flex-start
+                    .main_img
+                        max-width: 65%
+                        cursor: pointer
+                        height: auto
+                        object-fit: contain
+                        flex-grow: 1
+                        order: 2
+                    span
+                        display: flex
+                        cursor: pointer
+                        margin: auto 0
+                        .arrow
+                            width: 15px
+                            margin: auto 0
+                            padding: 0 15px
+                            user-select: none
+                            cursor: pointer
+                            +res(md)
+                                width: 40px
+                            +res(lg)
+                                width: 50px
+                            +res(xl)
+                                width: 60px
+                .rest
+                    display: flex
+                    justify-content: center
+                    width: 80vw
+                    margin: 0 auto
+                    white-space: nowrap
+                    overflow: hidden
+                    text-align: center
+                    scroll-behavior: smooth
+                    img
+                        width: 50px
+                        margin: 15px 3px 0px 1px
+                        cursor: pointer
+                        box-sizing: border-box
+
+                .cross
+                    position: relative
+                    display: none
+                    height: 50px
+                    width: 50px
+                    place-content: center
+                    cursor: pointer
+                    margin-left: auto
+                    padding-right: 10px
+                    span
+                        display: block
+                        height: 6px
+                        width: 50px
+                        background: #44494f
+                        &:nth-child(1)
+                            transform: rotate(45deg) translate(4px,4px)
+                        &:nth-child(2)
+                            transform: rotate(-45deg)
+        .reviews
+            background: $darkgrey
+            padding-top: 20px
+            h2
+                color: white
+            .reviews_wrap
+                color: black
+                .review
+                    background: $lightgrey
+                    padding: 10px 15px
+                    width: 75%
+                    box-sizing: border-box
+                    margin: 10px auto
+                    h4
+                        font-size: 1.15rem
+                    p
+                        padding: 5px 0
+                    div
+                        text-align: center
+            .buttons
+                text-align: center
+                transform: translateY(10px)
+                a
+                    text-decoration: none
+                    color: black
+                    border: 2px solid black
+                    background: white
+                    font-size: 1.2rem
+                    padding: 2px 10px
+                    &:nth-child(2)
+                        background: $lightgrey
+        .pricelist
+            padding: 20px 0
+            background: $verylightgrey
+            h2
+                padding-bottom: 15px
+        .contact
+            padding: 20px 0
+            background: $darkgrey
+            h2
+                color: white
+            form
+                display: flex
+                flex-direction: column
+                width: 90%
+                margin: 0 auto
+                textarea, input, button
+                    background: $middlegrey
+                    border-radius: 0
+                    text-decoration: none
+                    border: 1px solid black
+                    margin: 4px 0
+                    color: white
+                    padding: 3px 10px
+                    font-size: 1.2rem
+                    transition: all .5s
+                    &:focus
+                        outline: none
+                        border: 1px solid $lightgrey   
+            .contacts
+                font-size: 2rem
+                text-align: center
+                width: 90%
+                margin: 0 auto
+                padding: 15px 0
+                line-height: 2rem
+                a
+                    text-decoration: none
+                    color: white
+                    transition: all .5s
+                    padding-bottom: 4px
+                    &:hover
+                        color: $lightgrey
+                    & > img
+                        height: 25px
+                        width: 25px
+        .map
+            background: $verylightgrey
+            iframe
+                width: 100%
+                height: auto
+                min-height: 250px
+        .opening
+            background: $verylightgrey
+            padding: 20px 0
+            h2
+                padding-bottom: 15px
+            .card
+                span
+                    padding: 0
+        footer
+            background: $darkgrey
+            text-align: center
+            color: $lightgrey
+            a
+                text-decoration: none
+                display: block
+                color: $lightgrey
+                font-size: .7rem
+                padding: 3px 0
+            

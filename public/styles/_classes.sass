@@ -1,0 +1,53 @@
+$verylightgrey: #EDEDEE
+$lightgrey: #9AA1A5
+$middlegrey: #383832
+$darkgrey: #2B2B2B
+.block 
+    display: block
+.grid
+    display: grid!important
+.arrow_span:nth-child(2)
+    order: 1
+.arrow_span:nth-child(3)
+    order: 3                   
+.selected
+    :border 2px solid #212529
+    :animation border 1s forwards
+.gallery_zoomed
+    :position fixed
+    :width 100vw
+    :height 100vh
+    :top 0
+    :left 0
+    :background-color rgba(234,234,234,.9)
+    :z-index 4
+    :display grid
+    :place-content center
+.gallery_zoomed_main
+    :max-height 75vh!important
+    :padding-bottom 15px
+    :width auto!important
+    :flex-grow 1
+.gallery_zoomed_rest
+    :max-height 10vh!important
+    :width auto!important
+@media screen and(max-width: 450px)
+    .gallery_zoomed_main ~ span
+        :order 2!important
+    .gallery_zoomed_main
+        :max-width 100vw!important
+        :max-height none!important
+.marginTop15
+    margin-top: 15px
+.card
+    background: $darkgrey
+    text-align: center
+    padding: 15px 0 
+    width: 65%
+    margin: 0 auto
+    font-size: 1.2rem
+    span:nth-last-child(1)
+        font-size: 2rem
+        padding-top: 7px
+.backgroundGrey
+    background: $middlegrey!important   
